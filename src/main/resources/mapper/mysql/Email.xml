@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.insolu.ipaddress.mysqldao.EmailMapper">
+    <select id="getEmail" resultType="java.util.Map">
+        select * from email where enable = 1;
+    </select>
+
+    <!--    <insert id="addRItem" parameterType="java.util.List">-->
+    <!--        insert into lzf_rental_item_detailsl-->
+    <!--        (-->
+    <!--        id,-->
+    <!--        rentalInfoId,-->
+    <!--        itemName,-->
+    <!--        number,-->
+    <!--        remark-->
+    <!--        )-->
+    <!--        values-->
+    <!--        <foreach collection="list" item="item" index= "index" separator =",">-->
+    <!--            (-->
+    <!--            #{item.id},-->
+    <!--            #{item.rentalInfoId},-->
+    <!--            #{item.itemName},-->
+    <!--            #{item.number},-->
+    <!--            #{item.remark}-->
+    <!--            )-->
+    <!--        </foreach>-->
+    <!--    </insert>-->
+</mapper>

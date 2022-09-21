@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.insolu.ipaddress.mysqldao.IpAddressMapper">
+    <select id="getIpAddress" resultType="java.util.Map">
+        select * from ip_address
+    </select>
+    <select id="getOneIpAddress" resultType="java.util.Map">
+        select * from ip_address order by ctime desc limit 1
+    </select>
+    <insert id="addIpAddress" parameterType="java.util.Map" >
+        INSERT INTO `develop1`.`ip_address`
+            ( `ip`,  `source`)
+        VALUES
+            ( #{ipAddress},  #{source});
+    </insert>
+
+</mapper>
